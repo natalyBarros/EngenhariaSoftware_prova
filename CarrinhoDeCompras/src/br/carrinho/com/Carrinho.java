@@ -6,7 +6,7 @@ import br.produto.com.Produto;
 
 public class Carrinho 
 {
-    private int id;
+    private int id_car;
     private int quantidadeDeItens;
     private Item[] item;
     private double total;
