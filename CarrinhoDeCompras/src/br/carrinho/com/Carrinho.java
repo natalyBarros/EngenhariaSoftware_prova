@@ -1,12 +1,15 @@
 
 package br.carrinho.com;
 
+import br.item.com.Item;
 import br.produto.com.Produto;
 
 public class Carrinho 
 {
+    private int id;
     private int quantidadeDeItens;
-    
+    private Item[] item;
+    private double total;
     public Carrinho()
     {
         quantidadeDeItens = 0;
