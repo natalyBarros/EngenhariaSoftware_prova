@@ -24,7 +24,7 @@ public class CarrinhoTeste
     {
         Carrinho car = new Carrinho();
         
-        Produto produto = new Produto("Coca-cola");
+        Produto produto = new Produto("Coca-cola", 10 , 15);
         
         car.adicionar(produto);
         
@@ -39,7 +39,7 @@ public class CarrinhoTeste
     {
         Carrinho car = new Carrinho();
         
-        Produto produto = new Produto("Coca-cola");
+        Produto produto = new Produto("Coca-cola", 10 , 15);
         
         car.remover(produto);
         
