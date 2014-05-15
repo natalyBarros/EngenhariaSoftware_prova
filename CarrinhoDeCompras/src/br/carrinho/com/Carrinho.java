@@ -38,36 +38,60 @@ public class Carrinho
         return col ;
     }   
     
+     public boolean carIsEmpty(Produto p)
+           {
+        boolean col = false;
+        
+       
+          if (item.length == 0) 
+                 
+              col = true ;
+           
+            
+            else 
+              col = false ;
+        
+       
+        return col ;
+    }   
+    
+    
+     public int verificar(Produto p)
+           {
+        int i;
+        
+        for(i = 0 ; i<item.length; i++)
+        {
+            if(item[i].getProduto()== p)
+            {
+             return i;
+
+        }
+        
+        }
+        return i;
+        }
+    
     public void adicionar(Produto p)
     {    
-        int quant;
+        int quant = 0;
  
-        if(isEmpty(p))
+        if(isEmpty(p)){
+            int pop;
+            pop = verificar(p);
+           item [pop].addProd(); 
+             
+        }
         
-             JOptionPane.showInputDialog("Digite uma quantidade de Itens", quant);
-            
-        item[0] = new Item(5, p ,quant);
-            
-        else{
-     for(int i = 0 ; i<item.length; i++)
-        {
-            if(item[i].setProduto() == p)
-            {
-              
-            }
+        else {
+         int pop;
+            pop = verificar(p);
+            JOptionPane.showInputDialog("Digite uma quantidade de Itens", quant);
+            item [pop]= new Item(5, p ,quant);
         
-                }
-     
+           
+        }
     }
-    
-    public int getQuantidadeDeItens()
-    {
-        return quantidadeDeItens;
-    }
-    
-    public void remover(Produto produto)
-    {
-        quantidadeDeItens--;
-    }
+ 
     
 }
