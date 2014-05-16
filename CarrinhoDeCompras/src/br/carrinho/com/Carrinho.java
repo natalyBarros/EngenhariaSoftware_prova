@@ -58,7 +58,7 @@ public class Carrinho {
         } else if (verifica(p)) {
             int pop;
             pop = localizar(p);
-            item.add(new Item(pop, p, 1));
+            item.add(new Item(pop+1, p, 1));
 
         } else {
             int pop;
