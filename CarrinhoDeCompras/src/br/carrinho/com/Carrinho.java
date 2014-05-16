@@ -13,9 +13,8 @@ public class Carrinho
     private double total;
     
     
-    public Carrinho()
-    {
-         id_car = 1;
+    public Carrinho(int i)  {
+         id_car = i;
          ArrayList item = new ArrayList();      
          total = 0;
        
@@ -123,4 +122,25 @@ public class Carrinho
               
         }
     }
+
+    public int getId_car() {
+        return id_car;
+    }
+
+    public void setId_car(int id_car) {
+        this.id_car = id_car;
+    }
+
+    public ArrayList<Item> getItem() {
+        return item;
+    }
+
+    public void setItem(ArrayList<Item> item) {
+        this.item = item;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
+    
 }

@@ -11,7 +11,7 @@ public class CarrinhoTeste
     @Test
     public void criarCarrinhoVazioTest()
     {
-        Carrinho car = new Carrinho();
+        Carrinho car = new Carrinho(1);
 
         boolean vazio;
         vazio = car.carIsEmpty();
@@ -22,7 +22,7 @@ public class CarrinhoTeste
     @Test
     public void adicionarUmProdutoNoCarrinhoTest()
     {
-        Carrinho car = new Carrinho();
+        Carrinho car = new Carrinho(1);
         
         Produto produto = new Produto("Coca-cola", 10 , 15);
         
@@ -38,7 +38,7 @@ public class CarrinhoTeste
     @Test
     public void removerProdutoCarrinhoFicaVazioTest()
     {
-        Carrinho car = new Carrinho();
+        Carrinho car = new Carrinho(1);
         
         Produto produto = new Produto("Coca-cola", 10 , 15);
         
