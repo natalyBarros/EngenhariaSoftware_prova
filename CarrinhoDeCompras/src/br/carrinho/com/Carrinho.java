@@ -109,7 +109,7 @@ public class Carrinho
         
         
         if(carIsEmpty())
-           JOptionPane.showInputDialog("O carrinho esta Vazio");
+           JOptionPane.showMessageDialog(null, "O carrinho esta Vazio");
         else    
         if(verifica(p)){
             int pop;
@@ -118,7 +118,7 @@ public class Carrinho
              
         }
         else {
-            JOptionPane.showInputDialog("O carrinho não possui este produto");
+            JOptionPane.showMessageDialog(null,"O carrinho não possui este produto");
               
         }
     }
