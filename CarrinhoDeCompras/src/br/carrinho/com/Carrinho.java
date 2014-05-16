@@ -15,7 +15,7 @@ public class Carrinho
     
     public Carrinho(int i)  {
          id_car = i;
-         ArrayList item = new ArrayList();      
+         item = new ArrayList();      
          total = 0;
        
     }
@@ -40,9 +40,9 @@ public class Carrinho
     }   
     
      public boolean carIsEmpty()
-           {
-        return item.isEmpty() ;
-    }   
+     {
+        return item.isEmpty();
+     }   
     
     
      public int localizar(Produto p)
