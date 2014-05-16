@@ -19,7 +19,7 @@ public class Carrinho
        
     }
     
-    public boolean isEmpty(Produto p)
+    public boolean verifica(Produto p)
            {
         boolean col = false;
                  
@@ -38,9 +38,9 @@ public class Carrinho
         return col ;
     }   
     
-     public boolean carIsEmpty(Produto p)
+     public boolean carIsEmpty()
            {
-        boolean col = false;
+        boolean col ;
         
        
           if (item.length == 0) 
@@ -56,7 +56,7 @@ public class Carrinho
     }   
     
     
-     public int verificar(Produto p)
+     public int localizar(Produto p)
            {
         int i;
         
@@ -75,21 +75,24 @@ public class Carrinho
     public void adicionar(Produto p)
     {    
         int quant = 0;
- 
-        if(isEmpty(p)){
+        
+        if(carIsEmpty()){
+            JOptionPane.showInputDialog("Digite uma quantidade de Itens", quant);
+            item [0]= new Item(1, p ,quant);
+                    }
+        else    
+        if(verifica(p)){
             int pop;
-            pop = verificar(p);
+            pop = localizar(p);
            item [pop].addProd(); 
              
         }
-        
         else {
-         int pop;
-            pop = verificar(p);
+            int pop;
+            pop = localizar(p);
             JOptionPane.showInputDialog("Digite uma quantidade de Itens", quant);
-            item [pop]= new Item(5, p ,quant);
-        
-           
+            item [pop]= new Item(pop, p ,quant);
+              
         }
     }
  

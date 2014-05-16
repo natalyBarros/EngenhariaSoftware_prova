@@ -14,7 +14,7 @@ public class CarrinhoTeste
         Carrinho car = new Carrinho();
 
         boolean vazio;
-        vazio = car.isEmpty();
+        vazio = car.carIsEmpty();
 
         Assert.assertTrue(vazio);
     }   
