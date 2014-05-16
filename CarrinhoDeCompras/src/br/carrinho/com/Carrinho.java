@@ -16,7 +16,7 @@ public class Carrinho
     public Carrinho()
     {
          id_car = 1;
-         item.add(null);
+         ArrayList Item = new ArrayList();      
          total = 0;
        
     }
