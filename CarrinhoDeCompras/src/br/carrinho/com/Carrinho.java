@@ -4,17 +4,19 @@ package br.carrinho.com;
 import br.item.com.Item;
 import br.produto.com.Produto;
 import javax.swing.JOptionPane;
+import java.util.ArrayList;
 
 public class Carrinho 
 {
     private int id_car;
-    private Item[] item;
+    private ArrayList<Item> item;
     private double total;
     
     
     public Carrinho()
     {
-         
+         id_car = 1;
+         total = 0;
        
     }
     
@@ -22,9 +24,9 @@ public class Carrinho
            {
         boolean col = false;
                  
-        for(int i = 0 ; i<item.length; i++)
+        for(int i = 0 ; i<item.size(); i++)
         {
-            if(item[i].getProduto()== p)
+            if(item.get(i).getProduto() == p)
             {
               col = true ;
             }
@@ -42,7 +44,7 @@ public class Carrinho
         boolean col ;
         
        
-          if (item.length == 0) 
+          if (item.size() == 0) 
                  
               col = true ;           
             else 
@@ -56,9 +58,9 @@ public class Carrinho
            {
         int i;
         
-        for(i = 0 ; i<item.length; i++)
+        for(i = 0 ; i<item.size(); i++)
         {
-            if(item[i].getProduto()== p)
+            if(item.get(i).getProduto()== p)
             {
              return i;
 
@@ -74,20 +76,20 @@ public class Carrinho
         
         if(carIsEmpty()){
             
-            item [0]= new Item(1, p ,1);
+            item.set(0, new Item(1, p ,1));
                     }
         else    
         if(verifica(p)){
             int pop;
             pop = localizar(p);
-           item [pop].addProd(); 
+           item.get(pop).addProd(); 
              
         }
         else {
             int pop;
             pop = localizar(p);
            
-            item [pop]= new Item(pop, p ,1);
+            item.set(pop,new Item(pop, p ,1));
               
         }
     }
@@ -95,9 +97,9 @@ public class Carrinho
   public int getQuantidadeDeItens(){
       int i ,x=0;
   
-      for(i = 0 ; i<item.length; i++)
+      for(i = 0 ; i<item.size(); i++)
         {
-            x+=item[i].getQuantidade();
+            x+=item.get(i).getQuantidade();
         }
         return x;
   }
@@ -105,9 +107,9 @@ public class Carrinho
   public int getTotal(){
       int i ,x=0;
   
-      for(i = 0 ; i<item.length; i++)
+      for(i = 0 ; i<item.size(); i++)
         {
-            x+=item[i].getTotal();
+            x+=item.get(i).getTotal();
         }
         return x;
   }
@@ -121,7 +123,7 @@ public class Carrinho
         if(verifica(p)){
             int pop;
             pop = localizar(p);
-           item [pop].removeProd(); 
+           item.get(pop).removeProd(); 
              
         }
         else {
