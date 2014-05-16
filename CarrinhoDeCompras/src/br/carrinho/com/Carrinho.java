@@ -75,7 +75,7 @@ public class Carrinho
         
         if(carIsEmpty()){
             JOptionPane.showInputDialog("Digite uma quantidade de Itens", quant);
-            item [0]= new Item(1, p ,quant);
+            item [0]= new Item(1, p ,1);
                     }
         else    
         if(verifica(p)){
@@ -88,7 +88,7 @@ public class Carrinho
             int pop;
             pop = localizar(p);
             JOptionPane.showInputDialog("Digite uma quantidade de Itens", quant);
-            item [pop]= new Item(pop, p ,quant);
+            item [pop]= new Item(pop, p ,1);
               
         }
     }
