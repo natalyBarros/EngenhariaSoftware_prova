@@ -21,7 +21,7 @@ public class CarrinhoTeste {
     public void adicionarUmProdutoNoCarrinhoTest() {
         Carrinho car = new Carrinho(1);
 
-        Produto produto = new Produto("Coca-cola", 10, 15);
+        Produto produto = new Produto("Coca-cola", 10, 15, "Bebida");
 
         car.adicionar(produto);
 
@@ -36,7 +36,7 @@ public class CarrinhoTeste {
     public void removerProdutoCarrinhoFicaVazioTest() {
         Carrinho car = new Carrinho(1);
 
-        Produto produto = new Produto("Coca-cola", 10, 15);
+        Produto produto = new Produto("Coca-cola", 10, 15, "Bebida");
 
         car.remover(produto);
 

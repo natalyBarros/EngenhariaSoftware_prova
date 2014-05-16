@@ -5,6 +5,15 @@ public class Produto {
     private String nome;
     private int id_prod;
     private double preco;
+    private String tipo;
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 
     public String getNome() {
         return nome;
@@ -30,10 +39,11 @@ public class Produto {
         this.preco = preco;
     }
 
-    public Produto(String nome, int id_prod, double preco) {
+    public Produto(String nome, int id_prod, double preco, String tipo) {
         this.nome = nome;
         this.id_prod = id_prod;
         this.preco = preco;
+        this.tipo = tipo;
     }
 
 }
