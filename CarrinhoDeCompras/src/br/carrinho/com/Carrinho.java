@@ -16,6 +16,7 @@ public class Carrinho
     public Carrinho()
     {
          id_car = 1;
+         item.add(null);
          total = 0;
        
     }
