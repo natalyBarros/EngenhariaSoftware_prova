@@ -121,5 +121,14 @@ public class Carrinho {
     public void setTotal(double total) {
         this.total = total;
     }
+    
+    public void listar()
+    {
+        String x="";
+         for (int i = 0; i < item.size(); i++) {
+            x = item.get(i).getProduto().getNome()+ item.get(i).getTotal() +"\n"; 
+        }
+         JOptionPane.showMessageDialog(null, x );
+    }
 
 }
