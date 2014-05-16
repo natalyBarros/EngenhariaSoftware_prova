@@ -63,11 +63,10 @@ public class Carrinho
     
     public void adicionar(Produto p)
     {    
-        int quant = 0;
-        
+                
         if(carIsEmpty()){
             
-            item.set(0, new Item(1, p ,1));
+            item.set(1, new Item(1, p ,1));
                     }
         else    
         if(verifica(p)){
