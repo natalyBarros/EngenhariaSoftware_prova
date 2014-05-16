@@ -57,7 +57,7 @@ public class Item
     
     public void addProd()
     {
-        int quant = 0;
+        int quant = 1;
         
         JOptionPane.showInputDialog("Digite uma quantidade de Produtos",quant);
         

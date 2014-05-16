@@ -45,13 +45,10 @@ public class Carrinho
        
           if (item.length == 0) 
                  
-              col = true ;
-           
-            
+              col = true ;           
             else 
               col = false ;
-        
-       
+               
         return col ;
     }   
     
