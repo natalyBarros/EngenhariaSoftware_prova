@@ -66,7 +66,7 @@ public class Carrinho
                 
         if(carIsEmpty()){
             
-            item.set(1, new Item(1, p ,1));
+            item.add(new Item(1, p ,1));
                     }
         else    
         if(verifica(p)){
