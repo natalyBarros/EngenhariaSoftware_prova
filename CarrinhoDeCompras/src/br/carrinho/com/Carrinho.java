@@ -14,8 +14,7 @@ public class Carrinho
     
     public Carrinho()
     {
-       item[0] = new Item();
-       
+         
        
     }
     
@@ -74,7 +73,7 @@ public class Carrinho
         int quant = 0;
         
         if(carIsEmpty()){
-            JOptionPane.showInputDialog("Digite uma quantidade de Itens", quant);
+            
             item [0]= new Item(1, p ,1);
                     }
         else    
@@ -87,7 +86,7 @@ public class Carrinho
         else {
             int pop;
             pop = localizar(p);
-            JOptionPane.showInputDialog("Digite uma quantidade de Itens", quant);
+           
             item [pop]= new Item(pop, p ,1);
               
         }

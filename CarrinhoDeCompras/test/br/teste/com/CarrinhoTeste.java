@@ -35,6 +35,7 @@ public class CarrinhoTeste
         Assert.assertEquals(quantidade, 1);
     }
     
+    @Test
     public void removerProdutoCarrinhoFicaVazioTest()
     {
         Carrinho car = new Carrinho();
