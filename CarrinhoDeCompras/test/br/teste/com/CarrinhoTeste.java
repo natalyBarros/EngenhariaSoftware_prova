@@ -5,49 +5,45 @@ import org.junit.Assert;
 import br.carrinho.com.Carrinho;
 import br.produto.com.Produto;
 
+public class CarrinhoTeste {
 
-public class CarrinhoTeste 
-{    
     @Test
-    public void criarCarrinhoVazioTest()
-    {
+    public void criarCarrinhoVazioTest() {
         Carrinho car = new Carrinho(1);
 
         boolean vazio;
         vazio = car.carIsEmpty();
 
         Assert.assertTrue(vazio);
-    }   
-    
+    }
+
     @Test
-    public void adicionarUmProdutoNoCarrinhoTest()
-    {
+    public void adicionarUmProdutoNoCarrinhoTest() {
         Carrinho car = new Carrinho(1);
-        
-        Produto produto = new Produto("Coca-cola", 10 , 15);
-        
+
+        Produto produto = new Produto("Coca-cola", 10, 15);
+
         car.adicionar(produto);
-        
+
         int quantidade;
-        
+
         quantidade = car.getQuantidadeDeItens();
-        
+
         Assert.assertEquals(quantidade, 1);
     }
-    
+
     @Test
-    public void removerProdutoCarrinhoFicaVazioTest()
-    {
+    public void removerProdutoCarrinhoFicaVazioTest() {
         Carrinho car = new Carrinho(1);
-        
-        Produto produto = new Produto("Coca-cola", 10 , 15);
-        
+
+        Produto produto = new Produto("Coca-cola", 10, 15);
+
         car.remover(produto);
-        
+
         boolean vazio;
-        
+
         vazio = car.carIsEmpty();
-        
+
         Assert.assertTrue(vazio);
     }
 }

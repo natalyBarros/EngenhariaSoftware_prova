@@ -1,11 +1,10 @@
 package br.item.com;
 
-import br.carrinho.com.Carrinho;
 import br.produto.com.Produto;
 import javax.swing.JOptionPane;
 
-public class Item 
-{
+public class Item {
+
     private int id_Item;
     private Produto produto;
     private double total;
@@ -18,7 +17,7 @@ public class Item
     }
 
     public Item() {
-    
+
     }
 
     public int getId_Item() {
@@ -53,30 +52,23 @@ public class Item
         this.quantidade = quantidade;
     }
 
-
-    
-    public void addProd()
-    {
+    public void addProd() {
         int quant = 1;
-        
-        JOptionPane.showInputDialog("Digite uma quantidade de Produtos",quant);
-        
+
+        JOptionPane.showInputDialog("Digite uma quantidade de Produtos", quant);
+
         quantidade += quant;
-          total = quantidade*produto.getPreco();
-        
+        total = quantidade * produto.getPreco();
+
     }
-    
-    public void removeProd()
-    {
+
+    public void removeProd() {
         int quant = 0;
-        
-        JOptionPane.showInputDialog("Digite uma quantidade de Produtos a ser removida",quant);
-        
+
+        JOptionPane.showInputDialog("Digite uma quantidade de Produtos a ser removida", quant);
+
         quantidade -= quant;
-         
-        
+
     }
-    
-    
-    
+
 }

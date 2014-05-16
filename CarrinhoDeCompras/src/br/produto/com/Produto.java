@@ -1,13 +1,11 @@
 package br.produto.com;
 
-public class Produto 
-{
+public class Produto {
+
     private String nome;
     private int id_prod;
     private double preco;
-    
-    
-    
+
     public String getNome() {
         return nome;
     }
@@ -37,11 +35,5 @@ public class Produto
         this.id_prod = id_prod;
         this.preco = preco;
     }
-    
-    
-    
-    
-    
-    
+
 }
-   
