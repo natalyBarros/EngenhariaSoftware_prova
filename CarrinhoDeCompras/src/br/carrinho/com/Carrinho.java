@@ -96,5 +96,32 @@ public class Carrinho
         }
     }
  
-    
+  public int getQuantidadeDeItens(){
+      int i ,x=0;
+  
+      for(i = 0 ; i<item.length; i++)
+        {
+            x+=item[i].getQuantidade();
+        }
+        return x;
+  }
+  
+    public void remover(Produto p)
+    {    
+        
+        
+        if(carIsEmpty())
+           JOptionPane.showInputDialog("O carrinho esta Vazio");
+        else    
+        if(verifica(p)){
+            int pop;
+            pop = localizar(p);
+           item [pop].removeProd(); 
+             
+        }
+        else {
+            JOptionPane.showInputDialog("O carrinho não possui este produto");
+              
+        }
+    }
 }
