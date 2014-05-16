@@ -62,7 +62,7 @@ public class Item
         JOptionPane.showInputDialog("Digite uma quantidade de Produtos",quant);
         
         quantidade += quant;
-         
+          total = quantidade*produto.getPreco();
         
     }
     

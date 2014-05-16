@@ -106,6 +106,15 @@ public class Carrinho
         return x;
   }
   
+  public int getTotal(){
+      int i ,x=0;
+  
+      for(i = 0 ; i<item.length; i++)
+        {
+            x+=item[i].getTotal();
+        }
+        return x;
+  }
     public void remover(Produto p)
     {    
         
