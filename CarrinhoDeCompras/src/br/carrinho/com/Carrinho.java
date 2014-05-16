@@ -41,16 +41,7 @@ public class Carrinho
     
      public boolean carIsEmpty()
            {
-        boolean col ;
-        
-       
-          if (item.size() == 0) 
-                 
-              col = true ;           
-            else 
-              col = false ;
-               
-        return col ;
+        return item.isEmpty() ;
     }   
     
     
