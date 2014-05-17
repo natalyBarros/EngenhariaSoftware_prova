@@ -60,6 +60,7 @@ public class Carrinho {
             pop = localizar(p);
             
             item.set(pop, new Item(pop, p, 1));
+            
         } else {
             int pop;
             pop = localizar(p);
@@ -95,6 +96,8 @@ public class Carrinho {
             int pop;
             pop = localizar(p);
             item.get(pop).removeProd();
+            if(item.get(pop).getQuantidade()==0)
+                item.remove(pop);
 
         } else {
             JOptionPane.showMessageDialog(null, "O carrinho não possui este produto");
@@ -122,13 +125,14 @@ public class Carrinho {
         this.total = total;
     }
     
-    public void listar()
+    public String listar()
     {
         String x="";
          for (int i = 0; i < item.size(); i++) {
-            x = item.get(i).getProduto().getNome()+ item.get(i).getTotal() +"\n"; 
+            x += item.get(i).getProduto().getNome()+"\n"; 
         }
-         JOptionPane.showMessageDialog(null, x );
+        
+         return x;
     }
 
 }

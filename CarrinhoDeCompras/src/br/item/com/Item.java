@@ -63,11 +63,11 @@ public class Item {
     }
 
     public void removeProd() {
-        int quant = 0;
+        
 
-        JOptionPane.showInputDialog("Digite uma quantidade de Produtos a ser removida", quant);
-
-        quantidade -= quant;
+     
+        
+        quantidade -= 1;
 
     }
 
