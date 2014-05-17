@@ -29,7 +29,7 @@ public class CarrinhoTeste {
 
         quantidade = car.getQuantidadeDeItens();
 
-        Assert.assertEquals(quantidade, 1);
+        Assert.assertEquals(1, quantidade);
     }
 
     @Test
@@ -76,7 +76,7 @@ public class CarrinhoTeste {
 
         quantidade = car.getQuantidadeDeItens();
 
-        Assert.assertEquals(quantidade, 2);
+        Assert.assertEquals(2, quantidade);
     }
     public void TotalCarrinhoTest() {
         Carrinho car = new Carrinho(1);
@@ -90,7 +90,7 @@ public class CarrinhoTeste {
 
         total = car.getTotal();
 
-        Assert.assertEquals(total, 30);
+        Assert.assertEquals(30, total);
     }
     public void QuantItensCarrinhoTest() {
         Carrinho car = new Carrinho(1);
@@ -107,7 +107,22 @@ public class CarrinhoTeste {
 
         total = car.getQuantidadeDeItens();
 
-        Assert.assertEquals(total, 3);
+        Assert.assertEquals(3, total);
     }
-    
+    public void ListaPrecoDeCadaItemCarrinhoTest() {
+        Carrinho car = new Carrinho(1);
+        String x;
+        
+        Produto produto1 = new Produto("Coca-cola", 10, 3, "Bebida");
+        Produto produto2 = new Produto("Panetone", 20, 10, "Comida");
+        Produto produto3 = new Produto("50 tons de Cinza", 30, 35, "Livro");
+        
+        car.adicionar(produto1);
+        car.adicionar(produto2);
+        car.adicionar(produto2);
+        car.adicionar(produto3);
+
+        x = car.listarPrecoDeCadaItem();
+       Assert.assertEquals("Coca-cola 3\nPanetone 20\n50 tons de Cinza 35\n", x);
+    }
 }

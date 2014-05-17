@@ -134,5 +134,14 @@ public class Carrinho {
         
          return x;
     }
+    public String listarPrecoDeCadaItem()
+    {
+        String x="";
+         for (int i = 0; i < item.size(); i++) {
+            x += item.get(i).getProduto().getNome()+" "+item.get(i).getTotal()+"\n"; 
+        }
+        
+         return x;
+    }
 
 }
